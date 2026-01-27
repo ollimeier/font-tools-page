@@ -41,7 +41,7 @@ nav ul {
 }
 
 nav a {
-    color: #666;
+    color: #555;
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 6px;
@@ -60,7 +60,9 @@ nav a:hover {
 nav a:focus {
     outline: 2px solid #4f46e5;
     outline-offset: 2px;
-    color: #4f46e5;
+    color: #000;
+    background-color: #f5f5f5;
+    border-color: #4f46e5;
 }
 
 /* Main Content */
@@ -185,7 +187,7 @@ table td {
 
 table th {
     font-weight: 500;
-    color: #666;
+    color: #555;
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -241,7 +243,7 @@ table a:hover {
 /* Footer */
 footer {
     background-color: #fafafa;
-    color: #666;
+    color: #555;
     text-align: center;
     padding: 2rem 1rem;
     margin-top: 4rem;
