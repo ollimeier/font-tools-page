@@ -15,13 +15,71 @@
         } else {
           yearSpan.textContent = currentYear;
         }
+
+        // Hamburger menu toggle
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        if (hamburger && navMenu) {
+          hamburger.addEventListener("click", function () {
+            const isExpanded =
+              hamburger.getAttribute("aria-expanded") === "true";
+            hamburger.setAttribute("aria-expanded", !isExpanded);
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+          });
+
+          // Close menu when clicking on a link
+          const navLinks = document.querySelectorAll(".nav-menu a");
+          navLinks.forEach((link) => {
+            link.addEventListener("click", function () {
+              hamburger.classList.remove("active");
+              navMenu.classList.remove("active");
+              hamburger.setAttribute("aria-expanded", "false");
+            });
+          });
+
+          // Close menu when clicking outside
+          document.addEventListener("click", function (event) {
+            if (
+              !hamburger.contains(event.target) &&
+              !navMenu.contains(event.target)
+            ) {
+              hamburger.classList.remove("active");
+              navMenu.classList.remove("active");
+              hamburger.setAttribute("aria-expanded", "false");
+            }
+          });
+
+          // Close menu on Escape key
+          document.addEventListener("keydown", function (event) {
+            if (
+              event.key === "Escape" &&
+              navMenu.classList.contains("active")
+            ) {
+              hamburger.classList.remove("active");
+              navMenu.classList.remove("active");
+              hamburger.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
       });
     </script>
   </head>
   <body>
     <header>
       <nav aria-label="Main navigation">
-        <ul>
+        <button
+          class="hamburger"
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+        <ul class="nav-menu">
           <li>
             <a href="#professional-font-editors">Professional Font Editors</a>
           </li>
@@ -114,6 +172,21 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   >Glyphs Mini</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Fontself</td>
+              <td>
+                Fontself as a standalone app for iPad or as extention for
+                Illustrator and Photoshop.
+              </td>
+              <td>
+                <a
+                  href="https://www.fontself.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Fontself</a
                 >
               </td>
             </tr>
@@ -587,6 +660,15 @@
           target="_blank"
           rel="noopener noreferrer"
           >Olli Meier</a
+        >
+      </p>
+      <p>
+        A tool is missing? Please let me know via
+        <a
+          href="https://github.com/ollimeier/font-tools-page/issues"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Github Issues</a
         >
       </p>
     </footer>
