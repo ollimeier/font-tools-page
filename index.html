@@ -1,269 +1,594 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Font Tools & Apps</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Font Tools</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      // Set current year in footer
+      document.addEventListener("DOMContentLoaded", function () {
+        const yearSpan = document.getElementById("year");
+        const currentYear = new Date().getFullYear();
+        if (currentYear > 2026) {
+          yearSpan.textContent = "2026-" + currentYear;
+        } else {
+          yearSpan.textContent = currentYear;
+        }
+      });
+    </script>
+  </head>
+  <body>
     <header>
-        <h1>Font Tools & Apps</h1>
-        <nav aria-label="Main navigation">
-            <ul>
-                <li><a href="#professional-font-editors">Professional Font Editors</a></li>
-                <li><a href="#font-editor">Font Editor</a></li>
-                <li><a href="#font-post-production">Font Post-Production</a></li>
-                <li><a href="#font-testing">Font Testing</a></li>
-                <li><a href="#font-inspection">Font Inspection</a></li>
-                <li><a href="#font-proofing">Font Proofing</a></li>
-                <li><a href="#python-tools">Python Tools</a></li>
-                <li><a href="#rust-tools">Rust Tools</a></li>
-            </ul>
-        </nav>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li>
+            <a href="#professional-font-editors">Professional Font Editors</a>
+          </li>
+          <li><a href="#font-editors">More Font Editors</a></li>
+          <li>
+            <a href="#experimental-font-editors">Experimental Font Editors</a>
+          </li>
+          <li>
+            <a href="#font-post-production-apps">Font Post Production Apps</a>
+          </li>
+          <li><a href="#font-testing">Font Testing</a></li>
+          <li><a href="#font-inspection">Font Inspection</a></li>
+          <li><a href="#font-proofing">Font Proofing</a></li>
+          <li><a href="#rust-tools">Rust Tools</a></li>
+          <li><a href="#python-tools">Python Tools</a></li>
+          <li><a href="#other-tools">Other Tools</a></li>
+          <li><a href="#docus">Docus</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-        <section id="professional-font-editors">
-            <h2>Professional Font Editors</h2>
-            <div class="grid">
-                <div class="grid-item">
-                    <a href="https://glyphsapp.com" target="_blank" rel="noopener noreferrer">
-                        <img src="https://via.placeholder.com/300x200?text=Glyphs" alt="Glyphs">
-                        <p>Glyphs</p>
-                    </a>
-                </div>
-                <div class="grid-item">
-                    <a href="https://fontlab.com" target="_blank" rel="noopener noreferrer">
-                        <img src="https://via.placeholder.com/300x200?text=FontLab" alt="FontLab">
-                        <p>FontLab</p>
-                    </a>
-                </div>
-                <div class="grid-item">
-                    <a href="https://robofont.com" target="_blank" rel="noopener noreferrer">
-                        <img src="https://via.placeholder.com/300x200?text=RoboFont" alt="RoboFont">
-                        <p>RoboFont</p>
-                    </a>
-                </div>
-            </div>
-        </section>
+      <section id="professional-font-editors">
+        <h2>Professional Font Editors</h2>
+        <div class="grid">
+          <div class="grid-item">
+            <a
+              href="https://fontlab.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="./images/fontlab-logo.jpg" alt="FontLab" />
+              <p>FontLab</p>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a
+              href="https://fontra.xyz"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="./images/fontra-icon.svg"
+                alt="Fontra"
+                style="background: rgb(242, 24, 89)"
+              />
+              <p>Fontra</p>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a
+              href="https://glyphsapp.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="./images/glyphsapp-logo.jpg" alt="Glyphs" />
+              <p>Glyphs</p>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a
+              href="https://robofont.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="./images/robofont-logo.png" alt="RoboFont" />
+              <p>RoboFont</p>
+            </a>
+          </div>
+        </div>
+      </section>
 
-        <section id="font-editor">
-            <h2>Font Editor</h2>
-            <div class="grid">
-                <div class="grid-item">
-                    <a href="https://www.glyphrstudio.com" target="_blank" rel="noopener noreferrer">
-                        <img src="https://via.placeholder.com/300x200?text=Glyphr+Studio" alt="Glyphr Studio">
-                        <p>Glyphr Studio</p>
-                    </a>
-                </div>
-                <div class="grid-item">
-                    <a href="https://fontstruct.com" target="_blank" rel="noopener noreferrer">
-                        <img src="https://via.placeholder.com/300x200?text=FontStruct" alt="FontStruct">
-                        <p>FontStruct</p>
-                    </a>
-                </div>
-                <div class="grid-item">
-                    <a href="https://fontra.xyz" target="_blank" rel="noopener noreferrer">
-                        <img src="https://via.placeholder.com/300x200?text=Fontra" alt="Fontra">
-                        <p>Fontra</p>
-                    </a>
-                </div>
-                <div class="grid-item">
-                    <span class="grid-item-inactive">
-                        <img src="https://via.placeholder.com/300x200?text=FontBob" alt="FontBob">
-                        <p>FontBob (Coming Soon)</p>
-                    </span>
-                </div>
-                <div class="grid-item">
-                    <span class="grid-item-inactive">
-                        <img src="https://via.placeholder.com/300x200?text=Typograph+Studio" alt="Typograph Studio">
-                        <p>Typograph Studio (Private Beta)</p>
-                    </span>
-                </div>
-            </div>
-        </section>
+      <section id="font-editors">
+        <h2>Font Editors for Amateurs</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Glyphs Mini</td>
+              <td>The light-weight Mac font editor for beginners.</td>
+              <td>
+                <a
+                  href="https://glyphsapp.com/buy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Glyphs Mini</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
 
-        <section id="font-post-production">
-            <h2>Font Post-Production</h2>
-            <div class="grid">
-                <div class="grid-item">
-                    <a href="https://github.com/googlefonts/gftools" target="_blank" rel="noopener noreferrer">
-                        <img src="https://via.placeholder.com/300x200?text=gftools" alt="gftools">
-                        <p>gftools</p>
-                    </a>
-                </div>
-                <div class="grid-item">
-                    <a href="https://github.com/fonttools/fonttools" target="_blank" rel="noopener noreferrer">
-                        <img src="https://via.placeholder.com/300x200?text=fonttools" alt="fonttools">
-                        <p>fonttools</p>
-                    </a>
-                </div>
-                <div class="grid-item">
-                    <a href="https://github.com/adobe-type-tools/afdko" target="_blank" rel="noopener noreferrer">
-                        <img src="https://via.placeholder.com/300x200?text=AFDKO" alt="AFDKO">
-                        <p>AFDKO</p>
-                    </a>
-                </div>
-            </div>
-        </section>
+      <section id="font-editors">
+        <h2>More Font Editors</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>FontCreator</td>
+              <td>
+                FontCreator is a font editor that allows you to modify an
+                existing font—no matter how advanced or complex—and still
+                preserve all OpenType layout feature data.
+              </td>
+              <td>
+                <a
+                  href="https://www.high-logic.com/font-editor/fontcreator"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >FontCreator</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>FontForge</td>
+              <td>FontForge is libre software.</td>
+              <td>
+                <a
+                  href="https://fontforge.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >FontForge</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
 
-        <section id="font-testing">
-            <h2>Font Testing</h2>
-            <div class="grid">
-                <div class="grid-item">
-                    <a href="https://www.cyreal.org/Font-Testing-Page" target="_blank" rel="noopener noreferrer">
-                        <img src="https://via.placeholder.com/300x200?text=Font+Testing+Page" alt="Font Testing Page">
-                        <p>Font Testing Page</p>
-                    </a>
-                </div>
-                <div class="grid-item">
-                    <a href="https://motaitalic.com/tools/font-tester/devanagari" target="_blank" rel="noopener noreferrer">
-                        <img src="https://via.placeholder.com/300x200?text=Font+Tester" alt="Font Tester">
-                        <p>Font Tester (Devanagari)</p>
-                    </a>
-                </div>
-                <div class="grid-item">
-                    <a href="https://fontgauntlet.com" target="_blank" rel="noopener noreferrer">
-                        <img src="https://via.placeholder.com/300x200?text=Font+Gauntlet" alt="Font Gauntlet">
-                        <p>Font Gauntlet</p>
-                    </a>
-                </div>
-            </div>
-        </section>
+      <section id="experimental-font-editors">
+        <h2>Experimental Font Editors</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Bezy</td>
+              <td>
+                An open-source cross-platform font editor built with the Bevy
+                game engine, the Rust programming language.
+              </td>
+              <td>
+                <a
+                  href="https://github.com/eliheuer/bezy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Bezy</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>FontBob</td>
+              <td>Browser based font editor (Beta)</td>
+              <td>
+                <a
+                  href="https://fontbob.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >FontBob</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Glyphr Studio</td>
+              <td>
+                A free & open source web-based font editor, made for hobbyists
+                and typeface design beginners.
+              </td>
+              <td>
+                <a
+                  href="https://www.glyphrstudio.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Glyphr Studio</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
 
-        <section id="font-inspection">
-            <h2>Font Inspection</h2>
-            <div class="grid">
-                <div class="grid-item">
-                    <a href="https://fontdrop.info" target="_blank" rel="noopener noreferrer">
-                        <img src="https://via.placeholder.com/300x200?text=Fontdrop" alt="Fontdrop">
-                        <p>Fontdrop</p>
-                    </a>
-                </div>
-                <div class="grid-item">
-                    <a href="https://whatcanmyfontdo.com" target="_blank" rel="noopener noreferrer">
-                        <img src="https://via.placeholder.com/300x200?text=What+Can+My+Font+Do" alt="What Can My Font Do">
-                        <p>What Can My Font Do</p>
-                    </a>
-                </div>
-                <div class="grid-item">
-                    <a href="https://fontdev.app" target="_blank" rel="noopener noreferrer">
-                        <img src="https://via.placeholder.com/300x200?text=Fontdev" alt="Fontdev">
-                        <p>Fontdev</p>
-                    </a>
-                </div>
-                <div class="grid-item">
-                    <a href="https://lorp.github.io/samsa/src/samsa-gui.html" target="_blank" rel="noopener noreferrer">
-                        <img src="https://via.placeholder.com/300x200?text=Samsa" alt="Samsa">
-                        <p>Samsa</p>
-                    </a>
-                </div>
-            </div>
-        </section>
+      <section id="font-post-production-apps">
+        <h2>Font Post Production Apps</h2>
+        <div class="grid">
+          <div class="grid-item">
+            <a
+              href="https://fontdev.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="./images/fontdev.png" alt="FontDev.app" />
+              <p>FontDev.app</p>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a
+              href="https://www.fontmaster.nl/otmaster.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="./images/otmaster-screenshot.png" alt="OT Master" />
+              <p>OT Master</p>
+            </a>
+          </div>
+        </div>
+      </section>
 
-        <section id="font-proofing">
-            <h2>Font Proofing</h2>
-            <div class="grid">
-                <div class="grid-item">
-                    <a href="https://fontbureau.github.io/TypeRoof" target="_blank" rel="noopener noreferrer">
-                        <img src="https://via.placeholder.com/300x200?text=TypeRoof" alt="TypeRoof">
-                        <p>TypeRoof</p>
-                    </a>
-                </div>
-                <div class="grid-item">
-                    <a href="https://axis-praxis.org" target="_blank" rel="noopener noreferrer">
-                        <img src="https://via.placeholder.com/300x200?text=Axis+Praxis" alt="Axis Praxis">
-                        <p>Axis Praxis</p>
-                    </a>
-                </div>
-                <div class="grid-item">
-                    <a href="https://v-fonts.com" target="_blank" rel="noopener noreferrer">
-                        <img src="https://via.placeholder.com/300x200?text=V-Fonts" alt="V-Fonts">
-                        <p>V-Fonts</p>
-                    </a>
-                </div>
-            </div>
-        </section>
+      <section id="font-testing">
+        <h2>Font Testing</h2>
+        <div class="grid">
+          <div class="grid-item">
+            <a
+              href="https://fonttools.github.io/fontspector/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="./images/fontspector.png" alt="FontSpector" />
+              <p>FontSpector</p>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a
+              href="https://github.com/fonttools/fontbakery"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="./images/fontbakery.png" alt="FontBakery" />
+              <p>FontBakery</p>
+            </a>
+          </div>
+        </div>
+      </section>
 
-        <section id="python-tools">
-            <h2>Python Tools</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th>Link</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>fonttools</td>
-                        <td>Library for manipulating fonts</td>
-                        <td><a href="https://github.com/fonttools/fonttools" target="_blank" rel="noopener noreferrer">GitHub</a></td>
-                    </tr>
-                    <tr>
-                        <td>gftools</td>
-                        <td>Google Fonts tools</td>
-                        <td><a href="https://github.com/googlefonts/gftools" target="_blank" rel="noopener noreferrer">GitHub</a></td>
-                    </tr>
-                    <tr>
-                        <td>fontmake</td>
-                        <td>Compile fonts from sources</td>
-                        <td><a href="https://github.com/googlefonts/fontmake" target="_blank" rel="noopener noreferrer">GitHub</a></td>
-                    </tr>
-                    <tr>
-                        <td>defcon</td>
-                        <td>UFO font data objects</td>
-                        <td><a href="https://github.com/robotools/defcon" target="_blank" rel="noopener noreferrer">GitHub</a></td>
-                    </tr>
-                    <tr>
-                        <td>ufo2ft</td>
-                        <td>UFO to OpenType compiler</td>
-                        <td><a href="https://github.com/googlefonts/ufo2ft" target="_blank" rel="noopener noreferrer">GitHub</a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+      <section id="font-inspection">
+        <h2>Font Inspection</h2>
+        <div class="grid">
+          <div class="grid-item">
+            <a
+              href="https://ollimeier.github.io/fontfamilyviewer/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="./images/fontfamilyviewer.png" alt="FontFamilyViewer" />
+              <p>FontFamilyViewer</p>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a
+              href="https://fontdrop.info"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="./images/fontdrop.png" alt="Fontdrop" />
+              <p>Fontdrop</p>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a
+              href="https://whatcanmyfontdo.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="./images/whatcanmyfontdo.png"
+                alt="What Can My Font Do"
+              />
+              <p>What Can My Font Do</p>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a
+              href="https://lorp.github.io/samsa/src/samsa-gui.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="./images/samsa.png" alt="Samsa" />
+              <p>Samsa</p>
+            </a>
+          </div>
+        </div>
+      </section>
 
-        <section id="rust-tools">
-            <h2>Rust Tools</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th>Link</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>fontc</td>
-                        <td>Font compiler written in Rust</td>
-                        <td><a href="https://github.com/googlefonts/fontc" target="_blank" rel="noopener noreferrer">GitHub</a></td>
-                    </tr>
-                    <tr>
-                        <td>oxidize</td>
-                        <td>Rust font tools collection</td>
-                        <td><a href="https://github.com/googlefonts/oxidize" target="_blank" rel="noopener noreferrer">GitHub</a></td>
-                    </tr>
-                    <tr>
-                        <td>fontations</td>
-                        <td>Font parsing and manipulation library</td>
-                        <td><a href="https://github.com/googlefonts/fontations" target="_blank" rel="noopener noreferrer">GitHub</a></td>
-                    </tr>
-                    <tr>
-                        <td>skrifa</td>
-                        <td>Font introspection library</td>
-                        <td><a href="https://github.com/googlefonts/fontations/tree/main/skrifa" target="_blank" rel="noopener noreferrer">GitHub</a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+      <section id="font-proofing">
+        <h2>Font Proofing</h2>
+        <div class="grid">
+          <div class="grid-item">
+            <a
+              href="https://fontgauntlet.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="./images/fontgauntlet.png" alt="FontGauntlet" />
+              <p>FontGauntlet</p>
+            </a>
+          </div>
+
+          <div class="grid-item">
+            <a
+              href="https://www.cyreal.org/Font-Testing-Page/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="./images/cyreal-font-testing-page.png"
+                alt="Cyreal Font Testing Page"
+              />
+              <p>Cyreal Font Testing Page</p>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a
+              href="https://fontbureau.github.io/TypeRoof/legacy#2026-01-28T18:43:36Z;Roboto%20Flex%20Regular,Version%203.200%3Bgftools%5B0.9.32%5D;opsz8,wdth100,wght400;grid&all-gid;0"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="./images/TypeRoof.png" alt="TypeRoof" />
+              <p>TypeRoof</p>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a
+              href="https://axis-praxis.org"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="./images/axis-praxis.png" alt="Axis Praxis" />
+              <p>Axis Praxis</p>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a
+              href="https://v-fonts.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="./images/v-fonts.png" alt="V-Fonts" />
+              <p>V-Fonts</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="rust-tools">
+        <h2>Rust Tools</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>fontations</td>
+              <td>Font parsing and manipulation library</td>
+              <td>
+                <a
+                  href="https://github.com/googlefonts/fontations"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>fontc</td>
+              <td>Font compiler written in Rust</td>
+              <td>
+                <a
+                  href="https://github.com/googlefonts/fontc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="python-tools">
+        <h2>Python Tools</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>fonttools</td>
+              <td>Library for manipulating fonts</td>
+              <td>
+                <a
+                  href="https://github.com/fonttools/fonttools"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>fontmake</td>
+              <td>Compile fonts from sources</td>
+              <td>
+                <a
+                  href="https://github.com/googlefonts/fontmake"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>gftools</td>
+              <td>Google Fonts tools</td>
+              <td>
+                <a
+                  href="https://github.com/googlefonts/gftools"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>defcon</td>
+              <td>UFO font data objects</td>
+              <td>
+                <a
+                  href="https://github.com/robotools/defcon"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>ufo2ft</td>
+              <td>UFO to OpenType compiler</td>
+              <td>
+                <a
+                  href="https://github.com/googlefonts/ufo2ft"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="other-tools">
+        <h2>Other Tools</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>AFDKO</td>
+              <td>Adobe Font Development Kit for OpenType</td>
+              <td>
+                <a
+                  href="https://github.com/adobe-type-tools/afdko"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>VTT</td>
+              <td>
+                Microsoft Visual TrueType (VTT) is a professional-level tool for
+                graphically instructing TrueType and OpenType TM fonts.
+              </td>
+              <td>
+                <a
+                  href="https://learn.microsoft.com/en-us/typography/tools/vtt/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >VTT</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="docus">
+        <h2>Docus</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>AAT</td>
+              <td>TrueType Reference Manual</td>
+              <td>
+                <a
+                  href="https://developer.apple.com/fonts/TrueType-Reference-Manual/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >TrueType Reference Manual</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>OpenType Specification</td>
+              <td>OpenType Specification</td>
+              <td>
+                <a
+                  href="https://learn.microsoft.com/en-us/typography/opentype/spec/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >OpenType Specification</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Font Tools & Apps</p>
+      <p>
+        <span id="year">2026</span> font-tools.com is a collection of font tools
+        by
+        <a
+          href="https://olli-meier.de/about.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Olli Meier</a
+        >
+      </p>
     </footer>
-</body>
+  </body>
 </html>
