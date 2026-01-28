@@ -69,7 +69,7 @@ nav ul {
 }
 
 .hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(0.5rem, 0.5rem);
+  transform: rotate(45deg) translate(0.45rem, 0.45rem);
 }
 
 .hamburger.active span:nth-child(2) {
@@ -123,6 +123,7 @@ section h2 {
   font-size: 1.75rem;
   font-weight: 400;
   letter-spacing: -0.3px;
+  padding-top: 1em;
 }
 
 /* Grid System for Screenshots */
@@ -275,15 +276,18 @@ table a:hover {
   }
 
   header {
-    position: relative;
+    position: fixed;
+    width: 100%;
+    height: 3em;
   }
 
   /* Hide nav menu by default on mobile */
   nav ul {
     position: fixed;
     left: 0;
-    top: 4rem;
+    top: 3rem;
     flex-direction: column;
+    row-gap: 1.5em;
     background-color: #fff;
     width: 100%;
     text-align: center;
@@ -300,11 +304,10 @@ table a:hover {
     max-height: 80vh;
     overflow-y: auto;
     opacity: 1;
-    padding: 1rem;
+    padding: 2rem;
   }
 
   nav a {
-    display: block;
     text-align: center;
     padding: 0.75rem 1rem;
   }

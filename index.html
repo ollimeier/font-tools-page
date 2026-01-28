@@ -22,7 +22,8 @@
 
         if (hamburger) {
           hamburger.addEventListener("click", function () {
-            const isExpanded = hamburger.getAttribute("aria-expanded") === "true";
+            const isExpanded =
+              hamburger.getAttribute("aria-expanded") === "true";
             hamburger.setAttribute("aria-expanded", !isExpanded);
             hamburger.classList.toggle("active");
             navMenu.classList.toggle("active");
@@ -619,6 +620,15 @@
           target="_blank"
           rel="noopener noreferrer"
           >Olli Meier</a
+        >
+      </p>
+      <p>
+        A tool is missing? Please let me know via
+        <a
+          href="https://github.com/ollimeier/font-tools-page/issues"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Github Issues</a
         >
       </p>
     </footer>
