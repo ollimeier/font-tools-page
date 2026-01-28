@@ -41,7 +41,10 @@
 
           // Close menu when clicking outside
           document.addEventListener("click", function (event) {
-            if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
+            if (
+              !hamburger.contains(event.target) &&
+              !navMenu.contains(event.target)
+            ) {
               hamburger.classList.remove("active");
               navMenu.classList.remove("active");
               hamburger.setAttribute("aria-expanded", "false");
@@ -50,7 +53,10 @@
 
           // Close menu on Escape key
           document.addEventListener("keydown", function (event) {
-            if (event.key === "Escape" && navMenu.classList.contains("active")) {
+            if (
+              event.key === "Escape" &&
+              navMenu.classList.contains("active")
+            ) {
               hamburger.classList.remove("active");
               navMenu.classList.remove("active");
               hamburger.setAttribute("aria-expanded", "false");
@@ -166,6 +172,21 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   >Glyphs Mini</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Fontself</td>
+              <td>
+                Fontself as a standalone app for iPad or as extention for
+                Illustrator and Photoshop.
+              </td>
+              <td>
+                <a
+                  href="https://www.fontself.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Fontself</a
                 >
               </td>
             </tr>
