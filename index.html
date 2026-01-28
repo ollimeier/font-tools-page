@@ -15,13 +15,45 @@
         } else {
           yearSpan.textContent = currentYear;
         }
+
+        // Hamburger menu toggle
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        if (hamburger) {
+          hamburger.addEventListener("click", function () {
+            const isExpanded = hamburger.getAttribute("aria-expanded") === "true";
+            hamburger.setAttribute("aria-expanded", !isExpanded);
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+          });
+
+          // Close menu when clicking on a link
+          const navLinks = document.querySelectorAll(".nav-menu a");
+          navLinks.forEach((link) => {
+            link.addEventListener("click", function () {
+              hamburger.classList.remove("active");
+              navMenu.classList.remove("active");
+              hamburger.setAttribute("aria-expanded", "false");
+            });
+          });
+        }
       });
     </script>
   </head>
   <body>
     <header>
       <nav aria-label="Main navigation">
-        <ul>
+        <button
+          class="hamburger"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu">
           <li>
             <a href="#professional-font-editors">Professional Font Editors</a>
           </li>

@@ -40,6 +40,46 @@ nav ul {
   padding: 0 1rem;
 }
 
+/* Hamburger button - hidden by default, shown on mobile */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hamburger span {
+  width: 2rem;
+  height: 0.25rem;
+  background-color: #000;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  position: relative;
+  transform-origin: center;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(0.5rem, 0.5rem);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(0.5rem, -0.5rem);
+}
+
 nav a {
   color: #555;
   text-decoration: none;
@@ -229,14 +269,44 @@ table a:hover {
     padding: 0.75rem 0.5rem;
   }
 
+  /* Show hamburger button on mobile */
+  .hamburger {
+    display: flex;
+  }
+
+  header {
+    position: relative;
+  }
+
+  /* Hide nav menu by default on mobile */
   nav ul {
+    position: fixed;
+    left: 0;
+    top: 4rem;
     flex-direction: column;
-    gap: 0.5rem;
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid #e5e5e5;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+  }
+
+  /* Show nav menu when active */
+  nav ul.active {
+    max-height: 80vh;
+    overflow-y: auto;
+    opacity: 1;
+    padding: 1rem;
   }
 
   nav a {
     display: block;
     text-align: center;
+    padding: 0.75rem 1rem;
   }
 }
 
