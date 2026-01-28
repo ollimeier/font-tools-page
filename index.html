@@ -20,7 +20,7 @@
         const hamburger = document.querySelector(".hamburger");
         const navMenu = document.querySelector(".nav-menu");
 
-        if (hamburger) {
+        if (hamburger && navMenu) {
           hamburger.addEventListener("click", function () {
             const isExpanded = hamburger.getAttribute("aria-expanded") === "true";
             hamburger.setAttribute("aria-expanded", !isExpanded);
@@ -37,6 +37,24 @@
               hamburger.setAttribute("aria-expanded", "false");
             });
           });
+
+          // Close menu when clicking outside
+          document.addEventListener("click", function (event) {
+            if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
+              hamburger.classList.remove("active");
+              navMenu.classList.remove("active");
+              hamburger.setAttribute("aria-expanded", "false");
+            }
+          });
+
+          // Close menu on Escape key
+          document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape" && navMenu.classList.contains("active")) {
+              hamburger.classList.remove("active");
+              navMenu.classList.remove("active");
+              hamburger.setAttribute("aria-expanded", "false");
+            }
+          });
         }
       });
     </script>
@@ -46,12 +64,13 @@
       <nav aria-label="Main navigation">
         <button
           class="hamburger"
+          type="button"
           aria-label="Toggle navigation menu"
           aria-expanded="false"
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
         </button>
         <ul class="nav-menu">
           <li>
