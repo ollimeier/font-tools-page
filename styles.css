@@ -20,6 +20,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  position: relative;
 }
 
 header h1 {
@@ -297,6 +298,8 @@ table a:hover {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
+    gap: 0;
+    z-index: 999;
   }
 
   /* Show nav menu when active */
