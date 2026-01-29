@@ -132,6 +132,23 @@ section h2 {
   padding-top: 1em;
 }
 
+.heading-anchor {
+  text-decoration: none;
+  color: #000;
+}
+
+.heading-anchor:hover {
+  color: #4f46e5;
+}
+
+.heading-anchor:hover::after {
+  font-size: 70%;
+  content: "🔗";
+  margin-left: 0.25rem;
+  opacity: 0.6;
+  vertical-align: text-top;
+}
+
 /* Grid System for Screenshots */
 /* Responsive: 1 item on mobile, 2 on tablet, 3-4 on desktop */
 .grid {
