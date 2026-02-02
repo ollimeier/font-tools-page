@@ -21,5 +21,9 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: sftp
           port: 22
-          local-dir: .
-          server-dir: .
+          local-dir: ./
+          server-dir: ./
+          exclude: |
+                **/.git*
+                **/.github*
+                **/*.md
