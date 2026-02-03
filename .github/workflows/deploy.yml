@@ -9,8 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Deploy via SFTP
         uses: appleboy/scp-action@v0.1.7
@@ -19,5 +18,8 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: 22
-          source: "."
-          target: "."
+          source: "./" # everything in repo root
+          target: "." # current directory on login (usually htdocs)
+          overwrite: true
+          strip_components: 0
+          debug: true
