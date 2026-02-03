@@ -20,10 +20,10 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
-          port: 22
+          port: 21
           local-dir: ./
           server-dir: ./
           exclude: |
-                **/.git*
-                **/.github*
-                **/*.md
+            **/.git*
+            **/.github*
+            **/*.md
