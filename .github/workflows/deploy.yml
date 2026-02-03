@@ -7,19 +7,18 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
 
-      - name: Deploy via SFTP
-        uses: appleboy/scp-action@v0.1.7
+      - name: Upload via SFTP
+        uses: appleboy/sftp-action@master
         with:
           host: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: 22
           source: "./" # everything in repo root
-          target: "." # current directory on login (usually htdocs)
-          overwrite: true
+          target: "." # current folder on SFTP login
           strip_components: 0
+          overwrite: true
           debug: true
