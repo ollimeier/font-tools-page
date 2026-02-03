@@ -19,5 +19,9 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: 22
-          source: "."
-          target: "."
+          source: |
+            ./*
+            !.git/*
+            !.github/*
+            !*.md
+          target: "/htdocs"
